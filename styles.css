@@ -190,9 +190,7 @@ nav ul li a:hover {
     min-height: 90vh;
     text-align: center;
     padding: 80px 10%;
-    background: 
-        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
-        url('img/Found-1.jpg') center/cover no-repeat;
+    background-color: #f2f4f6;
 }
 
 .hero-text {
