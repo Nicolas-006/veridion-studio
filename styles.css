@@ -27,7 +27,7 @@
     --font-main: "Inter", sans-serif;
 
     --fs-h1: clamp(2.5rem, 5vw, 3.5rem);
-    --fs-h2: clamp(2rem. 4vw, 2.8rem);
+    --fs-h2: clamp(2rem, 4vw, 2.8rem);
     --fs-h3: 1.8rem;
     --fs-body: 1rem;
     --fs-small: 0.9rem;
@@ -47,7 +47,7 @@ body {
     background-color: var(--blanco);
     color: var(--gris-carbon);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 section {
@@ -1068,10 +1068,17 @@ button#submit-btn:hover {
     }
 
     .slider-container {
+        display: flex;
+        overflow-x: auto;
         padding: 40px 10%;
         gap: 20px;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .slider-container::-webkit-scrollbar {
+        display: none;
     }
 
     .draft-card {
@@ -1111,6 +1118,7 @@ button#submit-btn:hover {
         align-items: center;
         padding-top: 50px;
         transition: 0.4s;
+        z-index: 999;
     }
     nav ul.active { right: 0; }
     .menu-toggle { display: flex; }
